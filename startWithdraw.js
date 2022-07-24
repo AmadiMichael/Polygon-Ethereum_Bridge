@@ -17,13 +17,13 @@ async function test() {
     network: "testnet", // 'testnet' or 'mainnet'
     version: "mumbai", // 'mumbai' or 'v1'
     parent: {
-      provider: new ethers.Wallet("process.env.PRIVATEKEY", parentProvider),
+      provider: new ethers.Wallet(process.env.PRIVATEKEY, parentProvider),
       defaultConfig: {
         from: process.env.WALLETADDRESS,
       },
     },
     child: {
-      provider: new ethers.Wallet("process.env.PRIVATEKEY", childProvider),
+      provider: new ethers.Wallet(process.env.PRIVATEKEY, childProvider),
       defaultConfig: {
         from: process.env.WALLETADDRESS,
       },
@@ -39,7 +39,7 @@ async function test() {
     "0x6FF0C4Ea2E3E33C7dB7cF4cEc263D727fd50461D"
   );
 
-  const result = await erc20Token.withdrawStart(JSON.stringify(1 * 1e14), {
+  const result = await erc20Token.withdrawStart(JSON.stringify(1 * 1e13), {
     maxFeePerGas: ethers.utils.parseUnits(
       `${Math.ceil(json.data.fast.maxFee)}`,
       "gwei"

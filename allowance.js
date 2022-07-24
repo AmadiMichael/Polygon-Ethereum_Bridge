@@ -17,13 +17,13 @@ async function test() {
 
     version: "mumbai", // 'mumbai' or 'v1'
     parent: {
-      provider: new ethers.Wallet("process.env.PRIVATEKEY", parentProvider),
+      provider: new ethers.Wallet(process.env.PRIVATEKEY, parentProvider),
       defaultConfig: {
         from: process.env.WALLETADDRESS,
       },
     },
     child: {
-      provider: new ethers.Wallet("process.env.PRIVATEKEY", childProvider),
+      provider: new ethers.Wallet(process.env.PRIVATEKEY, childProvider),
       defaultConfig: {
         from: process.env.WALLETADDRESS,
       },
