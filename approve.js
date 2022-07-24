@@ -1,6 +1,7 @@
 const { POSClient, use } = require("@maticnetwork/maticjs");
 const { Web3ClientPlugin } = require("@maticnetwork/maticjs-ethers");
 const { ethers } = require("ethers");
+require("dotenv").config();
 
 // install web3 plugin
 use(Web3ClientPlugin);

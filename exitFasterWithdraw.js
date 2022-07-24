@@ -1,6 +1,4 @@
-const { pos } = require("../../config");
-const { getPOSClient, from } = require("../../utils");
-
+require("dotenv").config();
 const { POSClient, use, setProofApi } = require("@maticnetwork/maticjs");
 const { Web3ClientPlugin } = require("@maticnetwork/maticjs-ethers");
 const { ethers } = require("ethers");

@@ -1,6 +1,7 @@
 const { POSClient, use } = require("@maticnetwork/maticjs");
 const { Web3ClientPlugin } = require("@maticnetwork/maticjs-ethers");
 const { ethers } = require("ethers");
+require("dotenv").config();
 
 // install web3 plugin
 use(Web3ClientPlugin);
@@ -16,13 +17,13 @@ async function test() {
       network: "testnet", // 'testnet' or 'mainnet'
       version: "mumbai", // 'mumbai' or 'v1'
       parent: {
-        provider: new ethers.Wallet("process.env.PRIVATEKEY", parentProvider),
+        provider: new ethers.Wallet(process.env.PRIVATEKEY, parentProvider),
         defaultConfig: {
           from: process.env.WALLETADDRESS,
         },
       },
       child: {
-        provider: new ethers.Wallet("process.env.PRIVATEKEY", childProvider),
+        provider: new ethers.Wallet(process.env.PRIVATEKEY, childProvider),
         defaultConfig: {
           from: process.env.WALLETADDRESS,
         },
