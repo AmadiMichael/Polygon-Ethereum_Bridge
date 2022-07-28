@@ -37,7 +37,7 @@ async function test() {
   );
   //approve 100 amount
   const approveResult = await erc20RootToken.approve(
-    JSON.stringify(1 * 1e16)
+    JSON.stringify(1 * 1e10)
     //, {
     //spenderAddress: "0x499d11e0b6eac7c0593d8fb292dcbbf815fb29ae",
     //}

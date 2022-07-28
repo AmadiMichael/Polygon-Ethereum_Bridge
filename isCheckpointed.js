@@ -31,7 +31,7 @@ async function test() {
     });
 
     const isCheckPointed = await posClient.isCheckPointed(
-      "0x2e57509afd8a0913ede9e0fdf58b050ca29363b03bfcfc1e799a65a6a6a35884"
+      "0x96e9a50135dd169a6d69666118ac6c71a9d60400cee90da7b40bf60b35a0f83a"
     );
 
     console.log("isCheckpointed", isCheckPointed);

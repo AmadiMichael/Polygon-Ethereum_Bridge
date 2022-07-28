@@ -35,7 +35,7 @@ async function test() {
   );
 
   const result = await erc20Token.deposit(
-    JSON.stringify(1 * 1e16),
+    JSON.stringify(1 * 1e10),
     process.env.WALLETADDRESS,
     {
       from: process.env.WALLETADDRESS,

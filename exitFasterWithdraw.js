@@ -36,7 +36,7 @@ async function test() {
   );
 
   const result = await erc20Token.withdrawExitFaster(
-    "0xa92eeeffbdec472964827341053b940c1d2b5d23275042bab68267f9e40d4315"
+    "0xc938c6c6ef4ecc20f185b4fe1cc3566296cb74c0faa1257557c14a3c77706c03"
   );
 
   const txHash = await result.getTransactionHash();

@@ -39,7 +39,7 @@ async function test() {
     "0x6FF0C4Ea2E3E33C7dB7cF4cEc263D727fd50461D"
   );
 
-  const result = await erc20Token.withdrawStart(JSON.stringify(1 * 1e13), {
+  const result = await erc20Token.withdrawStart(JSON.stringify(1 * 1e10), {
     maxFeePerGas: ethers.utils.parseUnits(
       `${Math.ceil(json.data.fast.maxFee)}`,
       "gwei"

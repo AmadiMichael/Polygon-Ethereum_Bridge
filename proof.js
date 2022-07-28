@@ -30,10 +30,12 @@ async function test() {
       },
     });
 
-    const isDeposited = await posClient.isDeposited(
-      "0x0526c900f743b2b015be052fa45fcc8d155961ac670c881be257f146f1f1a873"
+    const proof = await posClient.exitUtil.buildPayloadForExit(
+      "0x96e9a50135dd169a6d69666118ac6c71a9d60400cee90da7b40bf60b35a0f83a",
+      "0x8c5261668696ce22758910d05bab8f186d6eb247ceac2af2e82c7dc17669b036"
     );
-    console.log("isDeposited", isDeposited);
+
+    console.log("proof", proof);
   } catch (err) {
     console.log(err.message);
   }
